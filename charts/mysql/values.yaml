@@ -1,0 +1,46 @@
+global:
+#  storageClass: "managed-csi" 
+
+fullnameOverride: "mysql"
+namespaceOverride: "hypexe-platform-dev"
+clusterDomain: cluster.local
+
+image:
+  registry: acrscusprodaks001.azurecr.io
+  repository: hypexe-mysql
+  tag: latest
+  pullPolicy: IfNotPresent
+  annotations: {}
+
+auth:
+  rootPassword: ""
+  createDatabase: false
+
+architecture: standalone
+
+primary:
+  name: "primary"
+  containerPorts:
+    mysql: 3306
+  persistence:
+    enabled: true
+    accessModes:
+      - ReadWriteOnce
+    size: 128Gi
+    annotations: {}
+  resources: 
+    requests:
+      memory: "8Gi"
+      cpu: "2"
+  limits:
+      memory: "8Gi"
+      cpu: "2"
+ 
+  service:
+    type: ClusterIP
+    ports:
+      mysql: 3306
+  persistentVolumeClaimRetentionPolicy:
+    enabled: false
+    whenScaled: Retain
+    whenDeleted: Retain # Retain or Delete
