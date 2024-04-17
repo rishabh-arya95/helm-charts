@@ -13,7 +13,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 8.0.36
-    created: "2024-04-16T09:58:35.88271314Z"
+    created: "2024-04-17T11:35:42.548281+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -23,7 +23,7 @@ entries:
     description: MySQL is a fast, reliable, scalable, and easy to use open source
       relational database system. Designed to handle mission-critical, heavy-load
       production applications.
-    digest: a5499866408fb3384a1e971cd697a8a6aa8949ce68cdd71765870507e544cc30
+    digest: 52945c346b17fc221cc3ecd9eaf23400ac92dbe33df12bddf3033589679da383
     home: https://bitnami.com
     icon: https://bitnami.com/assets/stacks/mysql/img/mysql-stack-220x234.png
     keywords:
@@ -39,6 +39,6 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/mysql
     urls:
-    - https://github.com/Shahid-LT/helm-charts/mysql-9.22.0.tgz
+    - file:///Users/rishabha/Desktop/Projects/helm-charts/charts/mysql/mysql-9.22.0.tgz
     version: 9.22.0
-generated: "2024-04-16T09:58:35.879854517Z"
+generated: "2024-04-17T11:35:42.54647+05:30"
